@@ -23,15 +23,15 @@ const textInputValidation = async (req: Request, res: Response, next: NextFuncti
         }
         
 
-        if (useCase == "bio" && data.length > parseInt(process.env.bioCharactersLimit)) {
+        if (useCase == "bio" && data.length > parseInt(process.env.bioCharactersLimit || "160")) {
             return next(new ErrorHandler("Max characters exceeded!", 400))
         }
 
-        if (useCase == "postCaptionAndComment" && data.length > parseInt(process.env.postCaptionAndCommentCharactersLimit)) {
+        if (useCase == "postCaptionAndComment" && data.length > parseInt(process.env.postCaptionAndCommentCharactersLimit || "2200")) {
             return next(new ErrorHandler("Max characters exceeded!", 400))
         }
 
-        if (useCase == "tweet" && data.length > parseInt(process.env.tweetCharactersLimit)) {
+        if (useCase == "tweet" && data.length > parseInt(process.env.tweetCharactersLimit || "4000")) {
             return next(new ErrorHandler("Max characters exceeded!", 400))
         }
 
