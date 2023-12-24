@@ -24,10 +24,11 @@ npm install
 
 3. Configure MySQL Database:
     a. Open MySQL Workbench and replace mysqlDatabase, mysqlUsername, and mysqlPassword with your credentials.
+   
     b. Run it on localhost.
 
 
-4. Run the Application:
+5. Run the Application:
 
 ```
 cd TalkShop
@@ -36,32 +37,49 @@ npx nodemon app.ts
 
 
 ## Backend Requirements
-a. Express Framework: Used for backend development.
-b. REST Framework: Implementation of RESTful API endpoints.
-c. SQL Database: MySQL chosen for data storage.
-d. Caching Mechanism: Utilizing Node-Cache for caching purposes.
-e. IP Based Rate Limiting: Implemented using Express-Rate-Limit.
+a. Express Framework: Used for backend development.  
+
+b. REST Framework: Implementation of RESTful API endpoints.  
+
+c. SQL Database: MySQL chosen for data storage.  
+
+d. Caching Mechanism: Utilizing Node-Cache for caching purposes.  
+
+e. IP Based Rate Limiting: Implemented using Express-Rate-Limit.  
+
 
 
 ## Project Structure
-a. Controllers: Main business logic resides in the controllers folder.
-b. Helpers: Validation logic is separated into the helpers folder.
-c. Models: Contains the schema for the MySQL database.
-d. Routes: All API routes are defined in the routes folder.
+a. Controllers: Main business logic resides in the controllers folder.  
+
+b. Helpers: Validation logic is separated into the helpers folder.  
+
+c. Models: Contains the schema for the MySQL database.  
+
+d. Routes: All API routes are defined in the routes folder.  
+
 
 ## Major Libraries Used
-a. Express
-b. Nodemon
-c. UUID (for generating unique post IDs)
-d. Node-Cache (for caching)
-e. Express-Rate-Limit (for IP based rate limiting)
-f. Sequelize (for MySQL query conversion)
-g. Mysql2 (MySQL connectivity)
+a. Express  
+
+b. Nodemon  
+
+c. UUID (for generating unique post IDs)  
+
+d. Node-Cache (for caching)  
+
+e. Express-Rate-Limit (for IP based rate limiting)  
+
+f. Sequelize (for MySQL query conversion)  
+
+g. Mysql2 (MySQL connectivity)  
+
 
 
 ## API Usage
 1. ### Create Post
-Endpoint: POST /api/v1/posts/createPost
+Endpoint: POST /api/v1/posts/createPost  
+
 Request Body:
 
 ```
@@ -74,8 +92,10 @@ Request Body:
 Note: "useCase" can be "bio", "postCaptionAndComment", or "tweet" ONLY.
 
 2. ### Get Post Analysis
-Endpoint: GET /api/v1/postAnalysis/getPostAnalysis/:id
-Usage: Copy the post ID from the database and replace ":id" in the endpoint.
+Endpoint: GET /api/v1/postAnalysis/getPostAnalysis/:id  
+
+Usage: Copy the post ID from the database and replace ":id" in the endpoint.  
+
 Functionality: Returns analysis including the number of words and average word length in the post.
 
 
@@ -83,11 +103,13 @@ Functionality: Returns analysis including the number of words and average word l
 1. ### Handling Large Data and High Requests:
 
     a. Utilizing efficient database indexing.
+   
     b. Implementing asynchronous processing for high request volumes.
 
-2. ### Parallelization of Analysis Computation:
+3. ### Parallelization of Analysis Computation:
 
     a. Designing analysis computation to be distributed across multiple nodes or processes.
+   
     b. Exploring the use of microservices for parallel processing.
 
 
