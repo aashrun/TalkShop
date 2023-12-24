@@ -23,6 +23,7 @@ npm install
 
 
 3. Configure MySQL Database:
+   
     a. Open MySQL Workbench and replace mysqlDatabase, mysqlUsername, and mysqlPassword with your credentials.
    
     b. Run it on localhost.
