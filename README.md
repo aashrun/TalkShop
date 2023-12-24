@@ -37,26 +37,26 @@ npx nodemon app.ts
 
 
 ## Backend Requirements
-a. Express Framework: Used for backend development.  
+a. **Express Framework**: Used for backend development.  
 
-b. REST Framework: Implementation of RESTful API endpoints.  
+b. **REST Framework**: Implementation of RESTful API endpoints.  
 
-c. SQL Database: MySQL chosen for data storage.  
+c. **SQL Database**: MySQL chosen for data storage.  
 
-d. Caching Mechanism: Utilizing Node-Cache for caching purposes.  
+d. **Caching Mechanism**: Utilizing Node-Cache for caching purposes.  
 
-e. IP Based Rate Limiting: Implemented using Express-Rate-Limit.  
+e. **IP Based Rate Limiting**: Implemented using Express-Rate-Limit.  
 
 
 
 ## Project Structure
-a. Controllers: Main business logic resides in the controllers folder.  
+a. **Controllers**: Main business logic resides in the controllers folder.  
 
-b. Helpers: Validation logic is separated into the helpers folder.  
+b. **Helpers**: Validation logic is separated into the helpers folder.  
 
-c. Models: Contains the schema for the MySQL database.  
+c. **Models**: Contains the schema for the MySQL database.  
 
-d. Routes: All API routes are defined in the routes folder.  
+d. **Routes**: All API routes are defined in the routes folder.  
 
 
 ## Major Libraries Used
@@ -78,9 +78,9 @@ g. Mysql2 (MySQL connectivity)
 
 ## API Usage
 1. ### Create Post
-Endpoint: POST /api/v1/posts/createPost  
+**Endpoint**: POST /api/v1/posts/createPost  
 
-Request Body:
+**Request Body**:
 
 ```
 {
@@ -89,14 +89,14 @@ Request Body:
 }
 ```
 
-Note: "useCase" can be "bio", "postCaptionAndComment", or "tweet" ONLY.
+**Note**: "useCase" can be "bio", "postCaptionAndComment", or "tweet" ONLY.
 
 2. ### Get Post Analysis
-Endpoint: GET /api/v1/postAnalysis/getPostAnalysis/:id  
+**Endpoint**: GET /api/v1/postAnalysis/getPostAnalysis/:id  
 
-Usage: Copy the post ID from the database and replace ":id" in the endpoint.  
+**Usage**: Copy the post ID from the database and replace ":id" in the endpoint.  
 
-Functionality: Returns analysis including the number of words and average word length in the post.
+**Functionality**: Returns analysis including the number of words and average word length in the post.
 
 
 ## Scalability Considerations
