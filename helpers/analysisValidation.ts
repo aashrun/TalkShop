@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express"
 import dotenv from "dotenv"
-import ErrorHandler from "./errorHandler"
+import helper from "./errorHandler"
 import PostModel from "../models/postModel"
 dotenv.config()
 
@@ -13,8 +13,8 @@ const postAnalysisValidation = async (req: Request, res: Response, next: NextFun
         let id = req.params.id
 
         let postData: {} = await PostModel.findOne({ where: { id }, raw: true })
-        if(!postData){
-            return next(new ErrorHandler("Data not found!", 404))
+        if (!postData) {
+            return helper.ErrorHandler("Data Not Found!", 404, req, res, next)
         }
         // req.postData = postData
 
@@ -22,7 +22,7 @@ const postAnalysisValidation = async (req: Request, res: Response, next: NextFun
 
     } catch (error) {
         console.log("analysisValidation.ts/postAnalysis", error)
-        return next(new ErrorHandler(error.message, 500))
+        return helper.ErrorHandler(error.message, 500, req, res, next)
     }
 };
 

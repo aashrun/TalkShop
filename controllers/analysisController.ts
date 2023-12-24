@@ -5,6 +5,8 @@ import helper from "../helpers/helper"
 import PostModel from "../models/postModel"
 import NodeCache from "node-cache"
 const cache = new NodeCache();
+import errorHelper from "../helpers/errorHandler"
+
 dotenv.config()
 
 
@@ -34,7 +36,7 @@ const postAnalysis = async (req: Request, res: Response, next: NextFunction): Pr
 
     } catch (error) {
         console.log("analysisController.ts/postAnalysis", error)
-        return next(new ErrorHandler(error.message, 500))
+        return errorHelper.ErrorHandler(error.message, 500, req, res, next)
     }
 };
 

@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 dotenv.config()
 import PostModel from "../models/postModel"
 import helper from "../helpers/helper"
-import ErrorHandler from "../helpers/errorHandler"
+import errorHelper from "../helpers/errorHandler"
 
 
 //=========================  Taking Text Inputs  ======================//
@@ -17,7 +17,7 @@ const textInput = async (req: Request, res: Response, next: NextFunction): Promi
 
     } catch (error) {
         console.log("postController.ts/textInput" + error)
-        return next(new ErrorHandler(error.message, 500))
+        return errorHelper.ErrorHandler(error.message, 500, req, res, next)
     }
 };
 
