@@ -106,11 +106,19 @@ g. Mysql2 (MySQL connectivity)
    
     b. Implementing asynchronous processing for high request volumes.
 
-3. ### Parallelization of Analysis Computation:
+    c. Large Data is handled by checking the length of the "data" key. For bio, the limit is character limit is 160, postCaptionAndComment has 2200 and tweet has 4000.
 
-    a. Designing analysis computation to be distributed across multiple nodes or processes.
+    d. High Number of requests are handled by Express-Rate-Limit library which has been implemented in the app.ts file, inside the routes.
+
+   
+
+2. ### Parallelization of Analysis Computation:
+
+    a. Designing analysis computation to be distributed in the helper.ts file under the helpers folder keeping into consideration for future API purposes.
    
     b. Exploring the use of microservices for parallel processing.
+
+
 
 
 ## Known Issues and Improvements
