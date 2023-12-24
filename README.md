@@ -26,8 +26,10 @@ npm install
 
 4. Run the Application:
 
+```
 cd TalkShop
 npx nodemon app.ts
+```
 
 
 ## Backend Requirements
@@ -59,10 +61,12 @@ g. Mysql2 (MySQL connectivity)
 Endpoint: POST /api/v1/posts/createPost
 Request Body:
 
+```
 {
     "useCase": "bio",
     "data": "Ed"
 }
+```
 
 Note: "useCase" can be "bio", "postCaptionAndComment", or "tweet" ONLY.
 
