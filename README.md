@@ -10,13 +10,16 @@ This project implements a scalable microservice for a hypothetical social media 
 ### Installation
 1. Clone the Repository:
 
+```
 git clone <repository_url>
+```
 
 2. Install Dependencies:
 
-
+```
 cd <project_directory>
 npm install
+```
 
 
 3. Configure MySQL Database:
